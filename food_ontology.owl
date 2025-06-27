@@ -1,0 +1,533 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="C:\Users\HP\Desktop\KRR proj\food_ontology.owl"
+         xmlns="C:\Users\HP\Desktop\KRR proj\food_ontology.owl#">
+
+<owl:Ontology rdf:about="C:\Users\HP\Desktop\KRR proj\food_ontology.owl"/>
+
+<owl:ObjectProperty rdf:about="#hasCuisine">
+  <rdfs:domain rdf:resource="#Dish"/>
+  <rdfs:range rdf:resource="#Cuisine"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#suitableFor">
+  <rdfs:domain rdf:resource="#Dish"/>
+  <rdfs:range rdf:resource="#Diet"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#containsAllergen">
+  <rdfs:domain rdf:resource="#Dish"/>
+  <rdfs:range rdf:resource="#Allergen"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasIngredient">
+  <rdfs:domain rdf:resource="#Dish"/>
+  <rdfs:range rdf:resource="#Ingredient"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasNutrition">
+  <rdfs:domain rdf:resource="#Dish"/>
+  <rdfs:range rdf:resource="#Nutrition"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#preparationTime">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Dish"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#isSpicy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Dish"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#calories">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Nutrition"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#protein">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Nutrition"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#carbs">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Nutrition"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#isVegetarian">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Dish"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#isVegan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Dish"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#isGlutenFree">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Dish"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Cuisine">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Diet">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Allergen">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Dish">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Ingredient">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Nutrition">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Italian">
+  <rdf:type rdf:resource="#Cuisine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Indian">
+  <rdf:type rdf:resource="#Cuisine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chinese">
+  <rdf:type rdf:resource="#Cuisine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mexican">
+  <rdf:type rdf:resource="#Cuisine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Japanese">
+  <rdf:type rdf:resource="#Cuisine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#French">
+  <rdf:type rdf:resource="#Cuisine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pakistani">
+  <rdf:type rdf:resource="#Cuisine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#American">
+  <rdf:type rdf:resource="#Cuisine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Thai">
+  <rdf:type rdf:resource="#Cuisine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mediterranean">
+  <rdf:type rdf:resource="#Cuisine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Vegan">
+  <rdf:type rdf:resource="#Diet"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Vegetarian">
+  <rdf:type rdf:resource="#Diet"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Keto">
+  <rdf:type rdf:resource="#Diet"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GlutenFree">
+  <rdf:type rdf:resource="#Diet"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Paleo">
+  <rdf:type rdf:resource="#Diet"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#LowCarb">
+  <rdf:type rdf:resource="#Diet"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gluten">
+  <rdf:type rdf:resource="#Allergen"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nuts">
+  <rdf:type rdf:resource="#Allergen"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dairy">
+  <rdf:type rdf:resource="#Allergen"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shellfish">
+  <rdf:type rdf:resource="#Allergen"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Soy">
+  <rdf:type rdf:resource="#Allergen"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Eggs">
+  <rdf:type rdf:resource="#Allergen"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tomato">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cheese">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Spinach">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Paneer">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chicken">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Peanuts">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Avocado">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rice">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shrimp">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tofu">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Beef">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Eggplant">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Noodles">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chickpeas">
+  <rdf:type rdf:resource="#Ingredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PizzaNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PalakPaneerNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#KungPaoChickenNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#TacosNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#SushiNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RatatouilleNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BiryaniNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#NihariNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BurgerNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HotDogNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ChowMeinNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">650</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PadThaiNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HummusNutrition">
+  <rdf:type rdf:resource="#Nutrition"/>
+  <calories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</calories>
+  <protein rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</protein>
+  <carbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</carbs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pizza">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#Italian"/>
+  <containsAllergen rdf:resource="#Dairy"/>
+  <containsAllergen rdf:resource="#Gluten"/>
+  <hasIngredient rdf:resource="#Tomato"/>
+  <hasIngredient rdf:resource="#Cheese"/>
+  <hasNutrition rdf:resource="#PizzaNutrition"/>
+  <suitableFor rdf:resource="#Vegetarian"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSpicy>
+  <isVegetarian rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegetarian>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PalakPaneer">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#Indian"/>
+  <suitableFor rdf:resource="#Vegetarian"/>
+  <containsAllergen rdf:resource="#Dairy"/>
+  <hasIngredient rdf:resource="#Paneer"/>
+  <hasIngredient rdf:resource="#Spinach"/>
+  <hasNutrition rdf:resource="#PalakPaneerNutrition"/>
+  <suitableFor rdf:resource="#GlutenFree"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isSpicy>
+  <isGlutenFree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isGlutenFree>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#KungPaoChicken">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#Chinese"/>
+  <containsAllergen rdf:resource="#Nuts"/>
+  <containsAllergen rdf:resource="#Soy"/>
+  <hasIngredient rdf:resource="#Chicken"/>
+  <hasIngredient rdf:resource="#Peanuts"/>
+  <hasNutrition rdf:resource="#KungPaoChickenNutrition"/>
+  <suitableFor rdf:resource="#Vegetarian"/>
+  <suitableFor rdf:resource="#Vegan"/>
+  <suitableFor rdf:resource="#GlutenFree"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isSpicy>
+  <isVegetarian rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegetarian>
+  <isVegan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegan>
+  <isGlutenFree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isGlutenFree>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tacos">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#Mexican"/>
+  <containsAllergen rdf:resource="#Gluten"/>
+  <hasIngredient rdf:resource="#Avocado"/>
+  <hasIngredient rdf:resource="#Beef"/>
+  <hasNutrition rdf:resource="#TacosNutrition"/>
+  <suitableFor rdf:resource="#Vegetarian"/>
+  <suitableFor rdf:resource="#Vegan"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isSpicy>
+  <isVegetarian rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegetarian>
+  <isVegan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegan>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sushi">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#Japanese"/>
+  <suitableFor rdf:resource="#Keto"/>
+  <containsAllergen rdf:resource="#Shellfish"/>
+  <hasIngredient rdf:resource="#Shrimp"/>
+  <hasIngredient rdf:resource="#Rice"/>
+  <hasNutrition rdf:resource="#SushiNutrition"/>
+  <suitableFor rdf:resource="#GlutenFree"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSpicy>
+  <isGlutenFree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isGlutenFree>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ratatouille">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#French"/>
+  <suitableFor rdf:resource="#Vegan"/>
+  <suitableFor rdf:resource="#Vegetarian"/>
+  <hasIngredient rdf:resource="#Tomato"/>
+  <hasIngredient rdf:resource="#Eggplant"/>
+  <hasNutrition rdf:resource="#RatatouilleNutrition"/>
+  <suitableFor rdf:resource="#GlutenFree"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSpicy>
+  <isGlutenFree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isGlutenFree>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Biryani">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#Pakistani"/>
+  <containsAllergen rdf:resource="#Gluten"/>
+  <hasIngredient rdf:resource="#Chicken"/>
+  <hasIngredient rdf:resource="#Rice"/>
+  <hasNutrition rdf:resource="#BiryaniNutrition"/>
+  <suitableFor rdf:resource="#Vegetarian"/>
+  <suitableFor rdf:resource="#Vegan"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isSpicy>
+  <isVegetarian rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegetarian>
+  <isVegan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegan>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nihari">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#Pakistani"/>
+  <containsAllergen rdf:resource="#Gluten"/>
+  <hasIngredient rdf:resource="#Beef"/>
+  <hasNutrition rdf:resource="#NihariNutrition"/>
+  <suitableFor rdf:resource="#Vegetarian"/>
+  <suitableFor rdf:resource="#Vegan"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isSpicy>
+  <isVegetarian rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegetarian>
+  <isVegan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegan>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Burger">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#American"/>
+  <containsAllergen rdf:resource="#Dairy"/>
+  <containsAllergen rdf:resource="#Gluten"/>
+  <hasIngredient rdf:resource="#Beef"/>
+  <hasIngredient rdf:resource="#Cheese"/>
+  <hasNutrition rdf:resource="#BurgerNutrition"/>
+  <suitableFor rdf:resource="#Vegetarian"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSpicy>
+  <isVegetarian rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegetarian>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HotDog">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#American"/>
+  <containsAllergen rdf:resource="#Gluten"/>
+  <hasIngredient rdf:resource="#Beef"/>
+  <hasNutrition rdf:resource="#HotDogNutrition"/>
+  <suitableFor rdf:resource="#Vegetarian"/>
+  <suitableFor rdf:resource="#Vegan"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSpicy>
+  <isVegetarian rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegetarian>
+  <isVegan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegan>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ChowMein">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#Chinese"/>
+  <containsAllergen rdf:resource="#Gluten"/>
+  <containsAllergen rdf:resource="#Soy"/>
+  <hasIngredient rdf:resource="#Noodles"/>
+  <hasIngredient rdf:resource="#Chicken"/>
+  <hasNutrition rdf:resource="#ChowMeinNutrition"/>
+  <suitableFor rdf:resource="#Vegetarian"/>
+  <suitableFor rdf:resource="#Vegan"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSpicy>
+  <isVegetarian rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegetarian>
+  <isVegan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVegan>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PadThai">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#Thai"/>
+  <containsAllergen rdf:resource="#Shellfish"/>
+  <containsAllergen rdf:resource="#Nuts"/>
+  <hasIngredient rdf:resource="#Shrimp"/>
+  <hasIngredient rdf:resource="#Noodles"/>
+  <hasIngredient rdf:resource="#Peanuts"/>
+  <hasNutrition rdf:resource="#PadThaiNutrition"/>
+  <suitableFor rdf:resource="#GlutenFree"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isSpicy>
+  <isGlutenFree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isGlutenFree>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hummus">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasCuisine rdf:resource="#Mediterranean"/>
+  <suitableFor rdf:resource="#Vegan"/>
+  <suitableFor rdf:resource="#GlutenFree"/>
+  <suitableFor rdf:resource="#Vegetarian"/>
+  <hasIngredient rdf:resource="#Chickpeas"/>
+  <hasNutrition rdf:resource="#HummusNutrition"/>
+  <preparationTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</preparationTime>
+  <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSpicy>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
